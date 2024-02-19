@@ -897,6 +897,99 @@ button.catalog__filter-btnline {
 
 .aside-filter__tab.tab--active span {
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     border-bottom: 2px solid #1C62CD;
+}
+
+.aside-filter__item-drop {
+    margin: 40px 0;
+}
+
+.aside-filter__item-title {
+    font-family: 'SFProDisplay-Semibold', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 26px;
+}
+
+.filter__item-drop {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.filter__item-drop::before {
+    content: "";
+    background-image: url('../images/arrow-down.svg');
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 12px;
+    height: 8px;
+    transform: rotate(0deg);
+}
+
+.filter__item-drop--active::before {
+    transform: rotate(180deg);
+}
+
+.aside-filter__content {
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.aside-filter__content-box {
+    width: 50%;
+}
+
+.aside-filter__content-label {
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 17px;
+}
+
+.jq-checkbox, .jq-radio  {
+    background: #fff;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #C4C4C4;
+    border-radius: 1px;
+    box-shadow: none;
+    vertical-align: -1px;
+    margin: 0 8px 0 0;
+}
+
+.jq-checkbox.checked, .jq-radio.checked {
+    background: #1C62CD;
+    border: none;
+}
+
+.jq-checkbox.checked .jq-checkbox__div {
+    width: 8px;
+    height: 6px;
+    margin: 4px 0 0 3px;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(0);
+    background-image: url('../images/checked-icon.svg');                                                                                                                                                                                                                                                                            
+}
+
+.jq-radio.checked .jq-radio__div {
+    width: 0;
+    height: 0;
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.aside-filter__content.aside-filter__content-radio {
+    flex-wrap: nowrap;
+}
+
+.irs--flat.irs-with-grid {
+    width: 100%;
 }
